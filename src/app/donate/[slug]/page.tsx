@@ -40,7 +40,7 @@ export default async function CausePage({ params }: Props) {
       </div>
 
       <section className="mx-auto grid max-w-6xl gap-8 px-6 py-6 lg:grid-cols-[1.35fr_1fr] lg:items-start">
-        <div>
+        <div className="min-w-0">
           <CauseCarousel images={c.gallery} fallback={fb} alt={c.title} />
           <div className="mt-3 text-right text-sm text-navy">
             <p className="font-medium text-emerald-800">100% WhatsApp Proof</p>

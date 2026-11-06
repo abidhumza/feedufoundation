@@ -23,7 +23,7 @@ export default function CauseCarousel({
     "absolute top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-navy shadow hover:bg-white";
 
   return (
-    <div>
+    <div className="min-w-0">
       <div className="relative">
         <Photo src={images[i]} fallback={fallback} alt={`${alt} ${i + 1}`} className="aspect-[555/380] w-full" />
         {many && (
@@ -48,14 +48,14 @@ export default function CauseCarousel({
           ))}
         </div>
       </div>
-      <div className={`mt-3 flex gap-2 ${many ? "" : "hidden"}`}>
+      <div className={`mt-3 flex gap-2 overflow-x-auto pb-1 ${many ? "" : "hidden"}`}>
         {images.map((src, n) => (
           <button
             key={n}
             type="button"
             aria-label={`Show photo ${n + 1}`}
             onClick={() => setI(n)}
-            className={`w-16 border-2 ${n === i ? "border-teal" : "border-transparent"}`}
+            className={`w-16 shrink-0 border-2 ${n === i ? "border-teal" : "border-transparent"}`}
           >
             <Photo src={src} fallback={fallback} alt="" className="aspect-[555/380] w-full" />
           </button>
