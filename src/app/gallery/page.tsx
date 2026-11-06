@@ -37,7 +37,7 @@ export default async function GalleryPage({ searchParams }: Props) {
             ))}
           </nav>
 
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-3">
             {items.map((g, i) => (
               <li key={`${g.category}-${i}`}>
                 <Photo src={g.src} fallback={categoryFallback[g.category]} focus="center 30%" alt={g.alt} className="aspect-[4/5] w-full border border-navy/60" />
